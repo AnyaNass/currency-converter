@@ -1,0 +1,13 @@
+.currensyRateList {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.currensyRateItem {
+	font-size: 16px;
+
+	@media (min-width: 768px) {
+		font-size: 22px;
+	}
+}

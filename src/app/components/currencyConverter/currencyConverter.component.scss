@@ -1,0 +1,82 @@
+.sectionTitle {
+	text-align: center;
+}
+
+.converterForm {
+	position: relative;
+	margin: 24px 0 0;
+
+	@media (min-width: 768px) {
+		display: flex;
+		justify-content: center;
+		gap: 50px;
+		margin: 32px 0 0;
+	}
+}
+
+.fieldWrapper {
+	display: flex;
+	gap: 12px;
+	align-items: center;
+	justify-content: center;
+
+
+	@media (min-width: 768px) {
+		&:first-child {
+			flex-direction: row-reverse;
+		}
+	}
+}
+
+.selectList {
+	width: 100px;
+	height: 50px;
+	border: none;
+	border-bottom: 2px solid #000;
+	padding: 10px;
+	font-size: 16px;
+	font-weight: 500;
+	font-family: inherit;
+	background-color: transparent;
+
+	@media (min-width: 768px) {
+		font-size: 20px;
+	}
+}
+
+.amountInput {
+	width: 200px;
+	height: 50px;
+	padding: 10px;
+	border: none;
+	border-bottom: 2px solid gray;
+	outline: none;
+	transition: border-color 300ms linear;
+	font-size: 16px;
+	font-weight: 500;
+
+	&:focus {
+		border-color: #000;
+	}
+
+	@media (min-width: 768px) {
+		font-size: 20px;
+	}
+}
+
+.alert {
+	position: absolute;
+	bottom: -80%;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 10px;
+	border: 1px solid red;
+	border-radius: 5px;
+	font-size: 20px;
+	font-weight: 500;
+	color: red;
+
+	@media (min-width: 768px) {
+		bottom: -120%;
+	}
+}

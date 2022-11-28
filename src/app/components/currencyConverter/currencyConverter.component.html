@@ -1,0 +1,21 @@
+<h2 [ngClass]="{sectionTitle: true}">Currency Converter</h2>
+<form [ngClass]="{converterForm: true}">
+	<label [ngClass]="{fieldWrapper : true}">
+		<input [ngClass]="{amountInput : true}" type="text" #amountFirst name="amount-first" [value]="firstInput"
+			[ngModel]="firstInput" (ngModelChange)="onInputChange($event, amountFirst.name)" placeholder="Input amount">
+		<select [ngClass]="{selectList: true}" name="currency-first" #currenciesFirst [value]="selectedCurrencyFirst"
+			(change)="onSelected(currenciesFirst.value, currenciesFirst.name)">
+			<option [value]="currency" *ngFor="let currency of allCurrencies">{{currency}}</option>
+		</select>
+	</label>
+
+	<label [ngClass]="{fieldWrapper : true}">
+		<input [ngClass]="{amountInput : true}" type="text" #amountSecond name="amount-second" [value]="secondInput"
+			[ngModel]="secondInput" (ngModelChange)="onInputChange($event, amountSecond.name)" placeholder="Input amount">
+		<select [ngClass]="{selectList: true}" name="currency-second" #currenciesSecond [value]="selectedCurrencySecond"
+			(change)="onSelected(currenciesSecond.value, currenciesSecond.name)">
+			<option [value]="currency" *ngFor="let currency of allCurrencies">{{currency}}</option>
+		</select>
+	</label>
+	<div [ngClass]="{alert: true}" *ngIf="showAlert">Input a number</div>
+</form>

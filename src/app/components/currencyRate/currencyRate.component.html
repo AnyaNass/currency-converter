@@ -1,0 +1,6 @@
+<ul [ngClass]="{currensyRateList : true}">
+	<li [ngClass]="{currensyRateItem : true}" *ngFor="let currency of currencyRate">
+		{{currency.name}}
+		{{currency.value | number : '1.0-2'}}
+	</li>
+</ul>
